@@ -1,0 +1,58 @@
+.titulo-texto {
+    font-family: 'Brush Script MT';
+    font-style: normal;
+    font-weight: 100;
+    line-height: 62px;
+    align-items: center;
+}
+
+h2 {
+    font-family: 'Roboto';
+    margin-bottom: 0px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: 62px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.div-titulo{
+    width: 90%;
+    margin: auto;
+
+}
+
+.carrito-de-compras{
+    width: 50%;
+}
+
+.elemento-navbar{
+    margin-top:7px;
+    margin-bottom :7px;
+    margin-left: 25px;
+    margin-right: 7px;
+    font-family: 'Roboto';
+    font-style: normal;
+}
+
+
+hr{
+    border: 1px solid #000000;
+    position: relative;
+    text-align: center;
+    margin: 0em;
+    border-width: 2px;
+}
+
+.cuadro-central{
+    align-items: center;
+    margin-left: 20%;
+    margin-top: 20px;
+    margin-right: 20%;
+}
+
+.cuadro-producto{
+    border: 1px solid rgba(0, 0, 0, 0.11);
+    box-sizing: border-box;
+}
