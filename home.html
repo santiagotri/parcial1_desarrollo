@@ -18,6 +18,9 @@
       crossorigin="anonymous"
     />
     <script src="main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&family=Rochester&display=swap" rel="stylesheet">
     
 </head>
 
@@ -25,53 +28,153 @@
     <div class="div-titulo">
         
         <div class="row">
-            <div class="col-10">
-                <h1 class="titulo-texto">
+            <div class="col-lg-10 col-9">
+                <h1 class="d-none d-lg-block titulo-texto-lg">
                     Restaurant & Lounge
                 </h1>
             </div>
-            <div class="col-2" id="col-carrito">
-                <img src="https://live.staticflickr.com/65535/51939332807_4bd6e232f8_t.jpg" class="carrito-de-compras" alt="Carrito de compras">
-                <p></p>
+            <div id= "carrito-de-compra" class="col-lg-1 col-2">
+                    <img src="https://live.staticflickr.com/65535/51939332807_4bd6e232f8_t.jpg" class="img-fluid carrito-de-compras" alt="Carrito de compras">
+                
+            </div>
+            <div class="col-1 cantidad-elementos">
+                <p id="cantidad-de-productos" class="cantidad-elementos"></p>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="titulo-texto d-block d-lg-none d-xl-none">
+                    <h1>
+                        Restaurant & Lounge
+                    </h1>
+                </div>
             </div>
         </div>
-        <hr>
+        <hr class="linea-personalizada d-none d-lg-block">
     </div>
-    <div class="imagen-banner row">
-        <img src="https://live.staticflickr.com/65535/51940642234_41d79cecb3_o.png" alt="Pasted Graphic">
+    <div class="row">
+        <img class="d-none d-lg-block" src="https://live.staticflickr.com/65535/51940642234_41d79cecb3_o.png" alt="Pasted Graphic">
     </div>
-    <hr>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <hr class="linea-personalizada d-none d-lg-block">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-none d-lg-block">
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="elemento-navbar nav-item nav-link active" href="#">Burgers</a>
-            <a class="elemento-navbar nav-item nav-link" href="#">Tacos</a>
-            <a class="elemento-navbar nav-item nav-link" href="#">Salads</a>
-            <a class="elemento-navbar nav-item nav-link" href="#">Desserts</a>
-            <a class="elemento-navbar nav-item nav-link" href="#">Drinks & Slides</a>
+            <a id="Burguers" class="elemento-navbar nav-item nav-link" href="#">Burgers</a>
+            <a id="Tacos" class="elemento-navbar nav-item nav-link" href="#">Tacos</a>
+            <a id="Salads" class="elemento-navbar nav-item nav-link" href="#">Salads</a>
+            <a id="Desserts" class="elemento-navbar nav-item nav-link" href="#">Desserts</a>
+            <a id="Drinks and Sides" class="elemento-navbar nav-item nav-link" href="#">Drinks & Sides</a>
           </div>
         </div>
     </nav>
-    <div class="cuadro-central">
-        <div class="row">
-            <h2>BURGUERS</h2>
+    <div class="nav-bar-mobile d-block d-lg-none d-xl-none">
+        <div class="row dropdown">
+            <button class="elemento-nav-bar-mobile" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="row">
+                    <div id="nav-bar-mobile-1" class="col-10">
+                        <p id="nav-bar-mobile-principal" class="vertical-center" style="text-align: left;">Burgers</p>
+                    </div>
+                    <div id="nav-bar-mobile-2" class="col-2">
+                        <img style = "max-height: 20px;"src="https://icones.pro/wp-content/uploads/2021/02/icone-de-fleche-vers-le-haut-noir.png" class="img-fluid">
+                    </div>
+                </div>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a id="Burguers_movil" class="dropdown-item" href="#">Burgers</a></li>
+              <li><a id="Tacos_movil" class="dropdown-item" href="#">Tacos</a></li>
+              <li><a id="Salads_movil" class="dropdown-item" href="#">Salads</a></li>
+              <li><a id="Desserts_movil" class="dropdown-item" href="#">Desserts</a></li>
+              <li><a id="Drinks and Sides_movil" class="dropdown-item" href="#">Drinks & Sides</a></li>
+            </ul>
         </div>
-        <hr>
-        <div class="row">
-            <div class="col-3 cuadro-producto">
-                <button click="anadirCarrito"> Agregar</button>
+    </div>
+    <div class="cuadro-central">
+        <div class="d-none d-lg-block">
+            <div class="row">
+                <h2 id="titulo-menu-actual">BURGUERS</h2>
             </div>
-            <div class="col-3 cuadro-producto">
-                <button click="anadirCarrito"> Agregar</button>
+            <hr class="linea-personalizada">
+        </div>
+        <div id = "contenido-principal" class="row">
+            <div class="col-lg-3 col-12">
+                <div class="cuadro-producto">
+                    <div class="imagen-producto">
+                        <img class="img-fluid" src="https://images.unsplash.com/photo-1543339462-88f4850abc5b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1177&q=80">
+                    </div>
+                    <div class="texto-producto" >
+                        <h3>Veggie Burger</h3>
+                        <p>Phasellus in felis. Donec semper sapien a libero. Nam dui.</p>
+                        <p class="precio-producto">86.29</p>
+                    </div>
+                    <div class="div-boton-añadir-carrito"><button class="boton-añadir-carrito"> Add to cart</button></div>
+                </div>
             </div>
-            <div class="col-3 cuadro-producto">
-                <button click="anadirCarrito"> Agregar</button>
+            <div class="col-lg-3 col-12"">
+                <div class="cuadro-producto">
+                    <div class="imagen-producto">
+                        <img class="img-fluid" src="https://images.unsplash.com/photo-1543339462-88f4850abc5b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1177&q=80">
+                    </div>
+                    <div class="texto-producto">
+                        <h3>Veggie Burger</h3>
+                        <p>Phasellus in felis. Donec semper sapien a libero. Nam dui.</p>
+                        <p class="precio-producto">86.29</p>
+                    </div>
+                    <div class="div-boton-añadir-carrito"><button class="boton-añadir-carrito" click="anadirCarrito"> Add to cart</button></div>
+                </div>
             </div>
-            <div class="col-3 cuadro-producto">
-                <button click="anadirCarrito"> Agregar</button>
+            <div class="col-lg-3 col-12"">
+                <div class="cuadro-producto">
+                    <div class="imagen-producto">
+                        <img class="img-fluid" src="https://images.unsplash.com/photo-1543339462-88f4850abc5b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1177&q=80">
+                    </div>
+                    <div class="texto-producto">
+                        <h3>Veggie Burger</h3>
+                        <p>Phasellus in felis. Donec semper sapien a libero. Nam dui.</p>
+                        <p class="precio-producto">86.29</p>
+                    </div>
+                    <div class="div-boton-añadir-carrito"><button class="boton-añadir-carrito" click="anadirCarrito"> Add to cart</button></div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-12">
+                <div class="cuadro-producto">
+                    <div class="imagen-producto">
+                        <img class="img-fluid" src="https://images.unsplash.com/photo-1543339462-88f4850abc5b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1177&q=80">
+                    </div>
+                    <div class="texto-producto">
+                        <h3>Veggie Burger</h3>
+                        <p>Phasellus in felis. Donec semper sapien a libero. Nam dui.</p>
+                        <p class="precio-producto">86.29</p>
+                    </div>
+                    <div class="div-boton-añadir-carrito"><button class="boton-añadir-carrito" click="anadirCarrito"> Add to cart</button></div>
+                </div>
             </div>
         </div>
     </div>
-     
+    
+    <p class="footer-personalizado"> Contact us: +57 3102171020 - info@restaurant.com  - @restaurant </p>
+
+    <div id="cuadro-confirmacion-orden" class="rectangulo-confirmacion" style="display:none;">
+        <div style="margin:5%;">
+            <div class="titulo-cancel-order">
+                Cancel the order
+            </div>
+            <hr class="linea-personalizada">
+            <br>
+            <p>Are you sure about cancelling the order?</p>
+            <br>
+            <hr class="linea-personalizada">
+            <br>
+            <div class="row">
+                <div id="boton-confirmacion-cancelar-orden" class="col-12 text-end">
+                        <button class="boton-verde">Yes, I want to cancel the order</button>
+                </div>
+            </div>
+            <div class="row">
+                <div id="boton-rojo-cancelar-orden" class="col-12 text-end">
+                        <button class="boton-rojo">No, I want to continue adding products</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
